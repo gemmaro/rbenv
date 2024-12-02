@@ -306,30 +306,26 @@ gemをインストールした後に自動で走るからです。
 
 ### rbenvがシェルにフックする仕組み
 
-`rbenv init` is a helper command to hook rbenv into a shell. This helper is
-part of the recommended installation instructions, but optional, as an
-experienced user can set up the following tasks manually. The `rbenv init`
-command has two modes of operation:
+`rbenv init`は、rbenvをシェルにフックを掛ける補助コマンドです。
+この補助機能は推奨されるインストール手順の一部ですが、省けます。
+経験を積めば、以下の作業を手で準備できるからです。
+`rbenv init`コマンドでは、操作に2つのモードがあります。
 
-1. `rbenv init`: made for humans, this command edits your shell
-   initialization files on disk to add rbenv to shell startup. (Prior to
-   rbenv 1.3.0, this mode only printed user instructions to the terminal,
-   but did nothing else.)
+1. `rbenv init`:
+   人間のためのもので、このコマンドにより、ディスク上のシェル初期化ファイルが編集されて、シェルの起動にrbenvが追加されます（rbenv
+   1.3.0より前では、このモードでは端末に利用者が従う手順が印字されるだけで、何もしませんでした）。
 
-2. `rbenv init -`: made for machines, this command outputs a shell script
-   suitable to be eval'd by the user's shell.
+2. `rbenv init -`: 機会のためのもので、このコマンドは利用者のシェルで評価するのに適したシェルスクリプトを出力します。
 
-When `rbenv init` is invoked from a bash shell, for example, it will add the
-following to the user's `~/.bashrc` or `~/.bash_profile`:
+`rbenv init`がbashシェルで呼び出されると、以下が利用者の`~/.bashrc`ないし`~/.bash_profile`に追加されます。
 
 ```sh
-# Added by `rbenv init` on <DATE>
+# Added by `rbenv init` on <日付>
 eval "$(rbenv init - --no-rehash bash)"
 ```
 
-You may add this line to your shell initialization files manually if you
-want to avoid running `rbenv init` as part of the setup process. Here is
-what the eval'd script does:
+準備の工程の部分で、`rbenv init`を走らせたくないときは、手作業でシェル初期化ファイルにこの行を加えても構いません。
+以下は、評価されたスクリプトがすることです。
 
 0. 必要であれば`rbenv`実行プログラムをPATHに加えます。
 
