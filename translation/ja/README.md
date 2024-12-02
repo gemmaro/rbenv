@@ -306,10 +306,30 @@ gemをインストールした後に自動で走るからです。
 
 ### rbenvがシェルにフックする仕組み
 
-`rbenv init`はrbenvをシェルで起動させる補助コマンドです。
-この補助機能は推奨されるインストール手順の一部ですが、省けます。
-発展的なことをする利用者は、次の作業を手作業で準備できるからです。
-以下は、この準備の過程で、シェルにより出力が`eval`されたときにコマンドが行うことです。
+`rbenv init` is a helper command to hook rbenv into a shell. This helper is
+part of the recommended installation instructions, but optional, as an
+experienced user can set up the following tasks manually. The `rbenv init`
+command has two modes of operation:
+
+1. `rbenv init`: made for humans, this command edits your shell
+   initialization files on disk to add rbenv to shell startup. (Prior to
+   rbenv 1.3.0, this mode only printed user instructions to the terminal,
+   but did nothing else.)
+
+2. `rbenv init -`: made for machines, this command outputs a shell script
+   suitable to be eval'd by the user's shell.
+
+When `rbenv init` is invoked from a bash shell, for example, it will add the
+following to the user's `~/.bashrc` or `~/.bash_profile`:
+
+```sh
+# Added by `rbenv init` on <DATE>
+eval "$(rbenv init - --no-rehash bash)"
+```
+
+You may add this line to your shell initialization files manually if you
+want to avoid running `rbenv init` as part of the setup process. Here is
+what the eval'd script does:
 
 0. 必要であれば`rbenv`実行プログラムをPATHに加えます。
 
@@ -325,7 +345,6 @@ gemをインストールした後に自動で走るからです。
    このちょっとした工程も省けますが、rbenvやプラグインが現在のシェルで変数を変えられるようにします。
    また、`rbenv shell`のようなコマンドができるようになります。
 
-生成されたスクリプトを調べる上で、`rbenv init -`を走らせることもできます。
 
 ### rbenvのアンインストール
 
