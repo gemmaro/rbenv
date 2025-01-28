@@ -12,3 +12,9 @@ ja/share/man/man1/rbenv.1.adoc: po/ja.po ../share/man/man1/rbenv.1.adoc po4a.cfg
 
 po/en.pot:
 	touch $@
+
+remotes:
+	git remote | grep mainstream \
+		|| git remote add mainstream https://github.com/rbenv/rbenv
+	git remote --verbose
+.PHONY: remotes
