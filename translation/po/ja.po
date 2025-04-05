@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: rbenv\n"
-"POT-Creation-Date: 2024-12-03 07:22+0900\n"
-"PO-Revision-Date: 2024-12-03 07:32+0900\n"
+"POT-Creation-Date: 2025-04-05 16:19+0900\n"
+"PO-Revision-Date: 2025-04-05 16:20+0900\n"
 "Last-Translator: gemmaro <gemmaro.dev@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -507,39 +507,42 @@ msgid "   #### Arch Linux and its derivatives\n"
 msgstr "   #### Arch Linuxとその派生\n"
 
 #. type: Plain text
-#: ../README.md:54
+#: ../README.md:52
 #, no-wrap
-msgid ""
-"   Archlinux has an [AUR Package](https://aur.archlinux.org/packages/rbenv/) for\n"
-"   rbenv and you can install it from the AUR using the instructions from this\n"
-"   [wiki page](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_and_upgrading_packages).\n"
-msgstr "   Archlinuxにはrbenvの[AURパッケージ](https://aur.archlinux.org/packages/rbenv/)があり、こちらの[ウィキページ](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_and_upgrading_packages)にある手順を使ってAURからインストールできます。\n"
+msgid "   Archlinux has an [official package](https://archlinux.org/packages/extra/any/rbenv/) which you can install:\n"
+msgstr "   Archlinuxには[公式パッケージ](https://archlinux.org/packages/extra/any/rbenv/)があり、そちらからインストールできます。\n"
+
+#. type: Fenced code block (sh)
+#: ../README.md:53
+#, no-wrap
+msgid "   sudo pacman -S rbenv\n"
+msgstr "   sudo pacman -S rbenv\n"
 
 #. type: Plain text
-#: ../README.md:56
+#: ../README.md:58
 #, no-wrap
 msgid "   #### Fedora\n"
 msgstr "   #### Fedora\n"
 
 #. type: Plain text
-#: ../README.md:58
+#: ../README.md:60
 #, no-wrap
 msgid "   Fedora has an [official package](https://packages.fedoraproject.org/pkgs/rbenv/rbenv/) which you can install:\n"
 msgstr "   Fedoraには[公式パッケージ](https://packages.fedoraproject.org/pkgs/rbenv/rbenv/)があり、そちらからインストールできます。\n"
 
 #. type: Fenced code block (sh)
-#: ../README.md:59
+#: ../README.md:61
 #, no-wrap
 msgid "   sudo dnf install rbenv\n"
 msgstr "   sudo dnf install rbenv\n"
 
 #. type: Bullet: '2. '
-#: ../README.md:64 ../README.md:87
+#: ../README.md:66 ../README.md:89
 msgid "Set up your shell to load rbenv."
 msgstr "rbenvを読み込むよう、シェルを設定します。"
 
 #. type: Plain text
-#: ../README.md:68
+#: ../README.md:70
 #, no-wrap
 msgid ""
 "    ```sh\n"
@@ -551,7 +554,7 @@ msgstr ""
 "    ```\n"
 
 #. type: Bullet: '3. '
-#: ../README.md:70
+#: ../README.md:72
 msgid ""
 "Close your Terminal window and open a new one so your changes take effect."
 msgstr ""
@@ -559,7 +562,7 @@ msgstr ""
 "こうすることで、変更が反映されます。"
 
 #. type: Plain text
-#: ../README.md:72
+#: ../README.md:74
 msgid ""
 "That's it! You are now ready to [install some Ruby versions](#installing-"
 "ruby-versions)."
@@ -569,13 +572,13 @@ msgstr ""
 "きました。"
 
 #. type: Title ###
-#: ../README.md:73
+#: ../README.md:75
 #, no-wrap
 msgid "Basic Git Checkout"
 msgstr "基本的なGitのチェックアウト"
 
 #. type: Plain text
-#: ../README.md:77
+#: ../README.md:79
 #, no-wrap
 msgid ""
 "> [!NOTE]   \n"
@@ -586,7 +589,7 @@ msgstr ""
 "> ウェブURLから実行スクリプトをダウンロードしたくなかったり、単に手作業による方法の方が好みであれば、以下の工程に従ってください。\n"
 
 #. type: Plain text
-#: ../README.md:79
+#: ../README.md:81
 msgid ""
 "This will get you going with the latest version of rbenv without needing a "
 "system-wide install."
@@ -595,12 +598,12 @@ msgstr ""
 "システム全域へのインストールは必要ありません。"
 
 #. type: Bullet: '1. '
-#: ../README.md:81
+#: ../README.md:83
 msgid "Clone rbenv into `~/.rbenv`."
 msgstr "rbenvを`~/.rbenv`へクローンします。"
 
 #. type: Plain text
-#: ../README.md:85
+#: ../README.md:87
 #, no-wrap
 msgid ""
 "    ```sh\n"
@@ -609,28 +612,28 @@ msgid ""
 msgstr ""
 "    ```sh\n"
 "    git clone https://github.com/rbenv/rbenv.git ~/.rbenv\n"
-"    ```\n"
-
-#. type: Plain text
-#: ../README.md:91
-#, no-wrap
-msgid ""
-"    ```sh\n"
-"    ~/.rbenv/bin/rbenv init\n"
-"    ```\n"
-msgstr ""
-"    ```sh\n"
-"    ~/.rbenv/bin/rbenv init\n"
 "    ```\n"
 
 #. type: Plain text
 #: ../README.md:93
 #, no-wrap
+msgid ""
+"    ```sh\n"
+"    ~/.rbenv/bin/rbenv init\n"
+"    ```\n"
+msgstr ""
+"    ```sh\n"
+"    ~/.rbenv/bin/rbenv init\n"
+"    ```\n"
+
+#. type: Plain text
+#: ../README.md:95
+#, no-wrap
 msgid "   If you are curious, see here to [understand what `init` does](#how-rbenv-hooks-into-your-shell).\n"
 msgstr "   ご興味があれば、[`init`がしていることをご確認](#how-rbenv-hooks-into-your-shell)いただけます。\n"
 
 #. type: Bullet: '3. '
-#: ../README.md:95
+#: ../README.md:97
 msgid ""
 "Restart your shell so that these changes take effect. (Opening a new "
 "terminal tab will usually do it.)"
@@ -639,13 +642,13 @@ msgstr ""
 "けばよいです）。"
 
 #. type: Title ####
-#: ../README.md:96
+#: ../README.md:98
 #, no-wrap
 msgid "Shell completions"
 msgstr "シェルの補完"
 
 #. type: Plain text
-#: ../README.md:99
+#: ../README.md:101
 #, no-wrap
 msgid "When _manually_ installing rbenv, it might be useful to note how completion scripts for various shells work. Completion scripts help with typing rbenv commands by expanding partially entered rbenv command names and option flags; typically this is invoked by pressing <kbd>Tab</kbd> key in an interactive shell.\n"
 msgstr ""
@@ -654,7 +657,7 @@ msgstr ""
 "大抵は、対話的なシェルで<kbd>タブ</kbd>を押すことで呼び出されます。\n"
 
 #. type: Bullet: '- '
-#: ../README.md:101
+#: ../README.md:103
 msgid ""
 "The **bash** completion script for rbenv ships with the project and gets "
 "[loaded by the `rbenv init` mechanism](#how-rbenv-hooks-into-your-shell)."
@@ -663,7 +666,7 @@ msgstr ""
 "の仕組みにより読み込まれます](#how-rbenv-hooks-into-your-shell)。"
 
 #. type: Bullet: '- '
-#: ../README.md:103
+#: ../README.md:105
 msgid ""
 "The **zsh** completion script ships with the project, but needs to be added "
 "to FPATH in zsh before it can be discovered by the shell. One way to do this "
@@ -675,7 +678,7 @@ msgstr ""
 "1つの方法は`~/.zshrc`を編集することでしょう。"
 
 #. type: Fenced code block (sh)
-#: ../README.md:104
+#: ../README.md:106
 #, no-wrap
 msgid ""
 "  # assuming that rbenv was installed to `~/.rbenv`\n"
@@ -691,7 +694,7 @@ msgstr ""
 "  compinit\n"
 
 #. type: Bullet: '- '
-#: ../README.md:113
+#: ../README.md:115
 msgid ""
 "The **fish** completion script for rbenv ships with the fish shell itself "
 "and is not maintained by the rbenv project."
@@ -700,13 +703,13 @@ msgstr ""
 "クトでは保守されていません。"
 
 #. type: Title ###
-#: ../README.md:114
+#: ../README.md:116
 #, no-wrap
 msgid "Installing Ruby versions"
 msgstr "Rubyのバージョンのインストール"
 
 #. type: Plain text
-#: ../README.md:117
+#: ../README.md:119
 msgid ""
 "The `rbenv install` command does not ship with rbenv out-of-the-box, but is "
 "provided by the [ruby-build][] plugin."
@@ -716,7 +719,7 @@ msgstr ""
 "[ruby-build][]プラグインで提供されています。"
 
 #. type: Plain text
-#: ../README.md:119
+#: ../README.md:121
 msgid ""
 "Before attempting to install Ruby, **check that [your build environment]"
 "(https://github.com/rbenv/ruby-build/wiki#suggested-build-environment) has "
@@ -728,7 +731,7 @@ msgstr ""
 "それから以下を実施します。"
 
 #. type: Fenced code block (sh)
-#: ../README.md:120
+#: ../README.md:122
 #, no-wrap
 msgid ""
 "# list latest stable versions:\n"
@@ -750,7 +753,7 @@ msgstr ""
 "rbenv install 3.1.2\n"
 
 #. type: Plain text
-#: ../README.md:132
+#: ../README.md:134
 msgid ""
 "For troubleshooting `BUILD FAILED` scenarios, check the [ruby-build "
 "Discussions section](https://github.com/rbenv/ruby-build/discussions/"
@@ -761,13 +764,13 @@ msgstr ""
 "failures)をご確認ください。"
 
 #. type: Plain text
-#: ../README.md:133 ../README.md:156
+#: ../README.md:135 ../README.md:158
 #, no-wrap
 msgid "> [!NOTE]  \n"
 msgstr "> [!NOTE]  \n"
 
 #. type: Plain text
-#: ../README.md:138
+#: ../README.md:140
 #, no-wrap
 msgid ""
 "> If the `rbenv install` command wasn't found, you can install ruby-build as a plugin:\n"
@@ -781,13 +784,13 @@ msgstr ""
 "> ```\n"
 
 #. type: Plain text
-#: ../README.md:140
+#: ../README.md:142
 msgid "Set a Ruby version to finish installation and start using Ruby:"
 msgstr ""
 "Rubyのバージョンを設定してインストールが完了したら、Rubyを使い始められます。"
 
 #. type: Fenced code block (sh)
-#: ../README.md:140
+#: ../README.md:142
 #, no-wrap
 msgid ""
 "rbenv global 3.1.2   # set the default Ruby version for this machine\n"
@@ -799,7 +802,7 @@ msgstr ""
 "rbenv local 3.1.2    # このディレクトリのRubyのバージョンを設定\n"
 
 #. type: Plain text
-#: ../README.md:147
+#: ../README.md:149
 msgid ""
 "Alternatively to the `rbenv install` command, you can download and compile "
 "Ruby manually as a subdirectory of `~/.rbenv/versions`. An entry in that "
@@ -812,13 +815,13 @@ msgstr ""
 "ジョンへのシンボリックリンクにできます。"
 
 #. type: Title ####
-#: ../README.md:148
+#: ../README.md:150
 #, no-wrap
 msgid "Installing Ruby gems"
 msgstr "Rubyのgemのインストール"
 
 #. type: Plain text
-#: ../README.md:151
+#: ../README.md:153
 msgid ""
 "Select a Ruby version for your project using `rbenv local 3.1.2`, for "
 "example. Then, proceed to install gems as you normally would:"
@@ -828,13 +831,13 @@ msgstr ""
 "そうしたら、いつもしているようにgemのインストールを進めます。"
 
 #. type: Fenced code block (sh)
-#: ../README.md:152
+#: ../README.md:154
 #, no-wrap
 msgid "gem install bundler\n"
 msgstr "gem install bundler\n"
 
 #. type: Plain text
-#: ../README.md:158
+#: ../README.md:160
 #, no-wrap
 msgid "> You _should not use sudo_ to install gems. Typically, the Ruby versions will be installed under your home directory and thus writeable by your user. If you get the “you don't have write permissions” error when installing gems, it's likely that your \"system\" Ruby version is still a global default. Change that with `rbenv global <version>` and try again.\n"
 msgstr ""
@@ -844,12 +847,12 @@ msgstr ""
 "> `rbenv global <version>`として変更し、もう一度gemのインストールを試してください。\n"
 
 #. type: Plain text
-#: ../README.md:160
+#: ../README.md:162
 msgid "Check the location where gems are being installed with `gem env`:"
 msgstr "`gem env`で、インストールされたgemの場所をご確認ください。"
 
 #. type: Fenced code block (sh)
-#: ../README.md:161
+#: ../README.md:163
 #, no-wrap
 msgid ""
 "gem env home\n"
@@ -859,13 +862,13 @@ msgstr ""
 "# => ~/.rbenv/versions/<version>/lib/ruby/gems/...\n"
 
 #. type: Title ####
-#: ../README.md:166
+#: ../README.md:168
 #, no-wrap
 msgid "Uninstalling Ruby versions"
 msgstr "Rubyのバージョンのアンインストール"
 
 #. type: Plain text
-#: ../README.md:170
+#: ../README.md:172
 msgid ""
 "As time goes on, Ruby versions you install will accumulate in your `~/.rbenv/"
 "versions` directory."
@@ -874,7 +877,7 @@ msgstr ""
 "み重なっていきます。"
 
 #. type: Plain text
-#: ../README.md:175
+#: ../README.md:177
 msgid ""
 "To remove old Ruby versions, simply `rm -rf` the directory of the version "
 "you want to remove. You can find the directory of a particular Ruby version "
@@ -887,7 +890,7 @@ msgstr ""
 "例えば`rbenv prefix 2.7.0`とできます。"
 
 #. type: Plain text
-#: ../README.md:178
+#: ../README.md:180
 msgid ""
 "The [ruby-build][] plugin provides an `rbenv uninstall` command to automate "
 "the removal process."
@@ -896,24 +899,24 @@ msgstr ""
 "工程が自動化されています。"
 
 #. type: Title ##
-#: ../README.md:179
+#: ../README.md:181
 #, no-wrap
 msgid "Command Reference"
 msgstr "コマンドのリファレンス"
 
 #. type: Plain text
-#: ../README.md:182
+#: ../README.md:184
 msgid "The main rbenv commands you need to know are:"
 msgstr "知っておく必要のある、主要なrbenvのコマンドは次の通りです。"
 
 #. type: Title ###
-#: ../README.md:183
+#: ../README.md:185
 #, no-wrap
 msgid "rbenv versions"
 msgstr "rbenv versions"
 
 #. type: Plain text
-#: ../README.md:187
+#: ../README.md:189
 msgid ""
 "Lists all Ruby versions known to rbenv, and shows an asterisk next to the "
 "currently active version."
@@ -922,7 +925,7 @@ msgstr ""
 "また、現在有効なバージョンには隣にアスタリスクが表示されます。"
 
 #. type: Plain text
-#: ../README.md:195
+#: ../README.md:197
 #, no-wrap
 msgid ""
 "    $ rbenv versions\n"
@@ -942,13 +945,13 @@ msgstr ""
 "      ree-1.8.7-2011.03\n"
 
 #. type: Title ###
-#: ../README.md:196
+#: ../README.md:198
 #, no-wrap
 msgid "rbenv version"
 msgstr "rbenv version"
 
 #. type: Plain text
-#: ../README.md:200
+#: ../README.md:202
 msgid ""
 "Displays the currently active Ruby version, along with information on how it "
 "was set."
@@ -957,7 +960,7 @@ msgstr ""
 "加えて、どのように設定されたかについての情報もあります。"
 
 #. type: Plain text
-#: ../README.md:203
+#: ../README.md:205
 #, no-wrap
 msgid ""
 "    $ rbenv version\n"
@@ -967,13 +970,13 @@ msgstr ""
 "    1.9.3-p327 (set by /Users/sam/.rbenv/version)\n"
 
 #. type: Title ###
-#: ../README.md:204
+#: ../README.md:206
 #, no-wrap
 msgid "rbenv local"
 msgstr "rbenv local"
 
 #. type: Plain text
-#: ../README.md:211
+#: ../README.md:213
 msgid ""
 "Sets a local application-specific Ruby version by writing the version name "
 "to a `.ruby-version` file in the current directory. This version overrides "
@@ -987,13 +990,13 @@ msgstr ""
 "りすることもできます。"
 
 #. type: Plain text
-#: ../README.md:213
+#: ../README.md:215
 #, no-wrap
 msgid "    rbenv local 3.1.2\n"
 msgstr "    rbenv local 3.1.2\n"
 
 #. type: Plain text
-#: ../README.md:216
+#: ../README.md:218
 msgid ""
 "When run without a version number, `rbenv local` reports the currently "
 "configured local version. You can also unset the local version:"
@@ -1003,19 +1006,19 @@ msgstr ""
 "局所的なバージョンの設定を外すこともできます。"
 
 #. type: Plain text
-#: ../README.md:218
+#: ../README.md:220
 #, no-wrap
 msgid "    rbenv local --unset\n"
 msgstr "    rbenv local --unset\n"
 
 #. type: Title ###
-#: ../README.md:219
+#: ../README.md:221
 #, no-wrap
 msgid "rbenv global"
 msgstr "rbenv global"
 
 #. type: Plain text
-#: ../README.md:225
+#: ../README.md:227
 msgid ""
 "Sets the global version of Ruby to be used in all shells by writing the "
 "version name to the `~/.rbenv/version` file. This version can be overridden "
@@ -1028,13 +1031,13 @@ msgstr ""
 "`RBENV_VERSION`環境変数を設定して上塗りできます。"
 
 #. type: Plain text
-#: ../README.md:227
+#: ../README.md:229
 #, no-wrap
 msgid "    rbenv global 3.1.2\n"
 msgstr "    rbenv global 3.1.2\n"
 
 #. type: Plain text
-#: ../README.md:230
+#: ../README.md:232
 msgid ""
 "The special version name `system` tells rbenv to use the system Ruby "
 "(detected by searching your `$PATH`)."
@@ -1043,7 +1046,7 @@ msgstr ""
 "れた）システムのRubyが使われます。"
 
 #. type: Plain text
-#: ../README.md:233
+#: ../README.md:235
 msgid ""
 "When run without a version number, `rbenv global` reports the currently "
 "configured global version."
@@ -1052,13 +1055,13 @@ msgstr ""
 "ジョンを報告します。"
 
 #. type: Title ###
-#: ../README.md:234
+#: ../README.md:236
 #, no-wrap
 msgid "rbenv shell"
 msgstr "rbenv shell"
 
 #. type: Plain text
-#: ../README.md:239
+#: ../README.md:241
 msgid ""
 "Sets a shell-specific Ruby version by setting the `RBENV_VERSION` "
 "environment variable in your shell. This version overrides application-"
@@ -1070,13 +1073,13 @@ msgstr ""
 "します。"
 
 #. type: Plain text
-#: ../README.md:241
+#: ../README.md:243
 #, no-wrap
 msgid "    rbenv shell jruby-1.7.1\n"
 msgstr "    rbenv shell jruby-1.7.1\n"
 
 #. type: Plain text
-#: ../README.md:244
+#: ../README.md:246
 msgid ""
 "When run without a version number, `rbenv shell` reports the current value "
 "of `RBENV_VERSION`. You can also unset the shell version:"
@@ -1086,13 +1089,13 @@ msgstr ""
 "シェルのバージョンの設定を外すこともできます。"
 
 #. type: Plain text
-#: ../README.md:246
+#: ../README.md:248
 #, no-wrap
 msgid "    rbenv shell --unset\n"
 msgstr "    rbenv shell --unset\n"
 
 #. type: Plain text
-#: ../README.md:251
+#: ../README.md:253
 msgid ""
 "Note that you'll need rbenv's shell integration enabled (step 3 of the "
 "installation instructions) in order to use this command. If you prefer not "
@@ -1105,19 +1108,19 @@ msgstr ""
 "う。"
 
 #. type: Plain text
-#: ../README.md:253
+#: ../README.md:255
 #, no-wrap
 msgid "    export RBENV_VERSION=jruby-1.7.1\n"
 msgstr "    export RBENV_VERSION=jruby-1.7.1\n"
 
 #. type: Title ###
-#: ../README.md:254
+#: ../README.md:256
 #, no-wrap
 msgid "rbenv rehash"
 msgstr "rbenv rehash"
 
 #. type: Plain text
-#: ../README.md:257
+#: ../README.md:259
 msgid ""
 "Installs shims for all Ruby executables known to rbenv (`~/.rbenv/versions/*/"
 "bin/*`). Typically you do not need to run this command, as it will run "
@@ -1129,19 +1132,19 @@ msgstr ""
 "gemをインストールした後に自動で走るからです。"
 
 #. type: Plain text
-#: ../README.md:259
+#: ../README.md:261
 #, no-wrap
 msgid "    rbenv rehash\n"
 msgstr "    rbenv rehash\n"
 
 #. type: Title ###
-#: ../README.md:260
+#: ../README.md:262
 #, no-wrap
 msgid "rbenv which"
 msgstr "rbenv which"
 
 #. type: Plain text
-#: ../README.md:264
+#: ../README.md:266
 msgid ""
 "Displays the full path to the executable that rbenv will invoke when you run "
 "the given command."
@@ -1150,7 +1153,7 @@ msgstr ""
 "与えられたコマンドを走らせるとき、rbenvはこのパスを呼び出します。"
 
 #. type: Plain text
-#: ../README.md:267
+#: ../README.md:269
 #, no-wrap
 msgid ""
 "    $ rbenv which irb\n"
@@ -1160,18 +1163,18 @@ msgstr ""
 "    /Users/sam/.rbenv/versions/1.9.3-p327/bin/irb\n"
 
 #. type: Title ###
-#: ../README.md:268
+#: ../README.md:270
 #, no-wrap
 msgid "rbenv whence"
 msgstr "rbenv whence"
 
 #. type: Plain text
-#: ../README.md:271
+#: ../README.md:273
 msgid "Lists all Ruby versions that contain the specified executable name."
 msgstr "特定の実行プログラム名を含むRubyのバージョンを全て表示します。"
 
 #. type: Plain text
-#: ../README.md:276
+#: ../README.md:278
 #, no-wrap
 msgid ""
 "    $ rbenv whence rackup\n"
@@ -1185,18 +1188,18 @@ msgstr ""
 "    ree-1.8.7-2011.03\n"
 
 #. type: Title ##
-#: ../README.md:277
+#: ../README.md:279
 #, no-wrap
 msgid "Environment variables"
 msgstr "環境変数"
 
 #. type: Plain text
-#: ../README.md:280
+#: ../README.md:282
 msgid "You can affect how rbenv operates with the following settings:"
 msgstr "以下の設定で、rbenvによる操作を変えられます。"
 
 #. type: Plain text
-#: ../README.md:288
+#: ../README.md:290
 #, no-wrap
 msgid ""
 "name | default | description\n"
@@ -1216,13 +1219,13 @@ msgstr ""
 "`RBENV_DIR` | `$PWD` | `.ruby-version`ファイルの探索を始めるディレクトリです。\n"
 
 #. type: Title ###
-#: ../README.md:289
+#: ../README.md:291
 #, no-wrap
 msgid "How rbenv hooks into your shell"
 msgstr "rbenvがシェルにフックする仕組み"
 
 #. type: Plain text
-#: ../README.md:292
+#: ../README.md:294
 msgid ""
 "`rbenv init` is a helper command to hook rbenv into a shell. This helper is "
 "part of the recommended installation instructions, but optional, as an "
@@ -1235,29 +1238,37 @@ msgstr ""
 "`rbenv init`コマンドでは、操作に2つのモードがあります。"
 
 #. type: Bullet: '1. '
-#: ../README.md:294
+#: ../README.md:296
 msgid ""
 "`rbenv init`: made for humans, this command edits your shell initialization "
 "files on disk to add rbenv to shell startup. (Prior to rbenv 1.3.0, this "
 "mode only printed user instructions to the terminal, but did nothing else.)"
-msgstr "`rbenv init`: 人間のためのもので、このコマンドにより、ディスク上のシェル初期化ファイルが編集されて、シェルの起動にrbenvが追加されます（rbenv 1.3.0より前では、このモードでは端末に利用者が従う手順が印字されるだけで、何もしませんでした）。"
+msgstr ""
+"`rbenv init`: 人間のためのもので、このコマンドにより、ディスク上のシェル初期"
+"化ファイルが編集されて、シェルの起動にrbenvが追加されます（rbenv 1.3.0より前"
+"では、このモードでは端末に利用者が従う手順が印字されるだけで、何もしませんで"
+"した）。"
 
 #. type: Bullet: '2. '
-#: ../README.md:296
+#: ../README.md:298
 msgid ""
 "`rbenv init -`: made for machines, this command outputs a shell script "
 "suitable to be eval'd by the user's shell."
-msgstr "`rbenv init -`: 機会のためのもので、このコマンドは利用者のシェルで評価するのに適したシェルスクリプトを出力します。"
+msgstr ""
+"`rbenv init -`: 機会のためのもので、このコマンドは利用者のシェルで評価するの"
+"に適したシェルスクリプトを出力します。"
 
 #. type: Plain text
-#: ../README.md:298
+#: ../README.md:300
 msgid ""
 "When `rbenv init` is invoked from a bash shell, for example, it will add the "
 "following to the user's `~/.bashrc` or `~/.bash_profile`:"
-msgstr "`rbenv init`がbashシェルで呼び出されると、以下が利用者の`~/.bashrc`ないし`~/.bash_profile`に追加されます。"
+msgstr ""
+"`rbenv init`がbashシェルで呼び出されると、以下が利用者の`~/.bashrc`ないし`~/."
+"bash_profile`に追加されます。"
 
 #. type: Fenced code block (sh)
-#: ../README.md:299
+#: ../README.md:301
 #, no-wrap
 msgid ""
 "# Added by `rbenv init` on <DATE>\n"
@@ -1267,22 +1278,23 @@ msgstr ""
 "eval \"$(rbenv init - --no-rehash bash)\"\n"
 
 #. type: Plain text
-#: ../README.md:305
+#: ../README.md:307
 msgid ""
 "You may add this line to your shell initialization files manually if you "
 "want to avoid running `rbenv init` as part of the setup process. Here is "
 "what the eval'd script does:"
 msgstr ""
-"準備の工程の部分で、`rbenv init`を走らせたくないときは、手作業でシェル初期化ファイルにこの行を加えても構いません。\n"
+"準備の工程の部分で、`rbenv init`を走らせたくないときは、手作業でシェル初期化"
+"ファイルにこの行を加えても構いません。\n"
 "以下は、評価されたスクリプトがすることです。"
 
 #. type: Bullet: '0. '
-#: ../README.md:307
+#: ../README.md:309
 msgid "Adds `rbenv` executable to PATH if necessary."
 msgstr "必要であれば`rbenv`実行プログラムをPATHに加えます。"
 
 #. type: Bullet: '1. '
-#: ../README.md:309
+#: ../README.md:311
 msgid ""
 "Prepends `~/.rbenv/shims` directory to PATH. This is basically the only "
 "requirement for rbenv to function properly."
@@ -1291,12 +1303,12 @@ msgstr ""
 "基本的には、これこそがrbenvが適切に機能するための唯一の要件です。"
 
 #. type: Bullet: '2. '
-#: ../README.md:311
+#: ../README.md:313
 msgid "Installs bash shell completion for rbenv commands."
 msgstr "rbenvのコマンド用にbashのシェル補完をインストールします。"
 
 #. type: Bullet: '3. '
-#: ../README.md:313
+#: ../README.md:315
 msgid ""
 "Regenerates rbenv shims. If this step slows down your shell startup, you can "
 "invoke `rbenv init -` with the `--no-rehash` flag."
@@ -1306,7 +1318,7 @@ msgstr ""
 "init -`を呼び出せます。"
 
 #. type: Bullet: '4. '
-#: ../README.md:315
+#: ../README.md:317
 msgid ""
 "Installs the \"sh\" dispatcher. This bit is also optional, but allows rbenv "
 "and plugins to change variables in your current shell, making commands like "
@@ -1318,13 +1330,13 @@ msgstr ""
 "また、`rbenv shell`のようなコマンドができるようになります。"
 
 #. type: Title ###
-#: ../README.md:317
+#: ../README.md:319
 #, no-wrap
 msgid "Uninstalling rbenv"
 msgstr "rbenvのアンインストール"
 
 #. type: Plain text
-#: ../README.md:321
+#: ../README.md:323
 msgid ""
 "The simplicity of rbenv makes it easy to temporarily disable it, or "
 "uninstall from the system."
@@ -1333,7 +1345,7 @@ msgstr ""
 "のは簡単です。"
 
 #. type: Bullet: '1. '
-#: ../README.md:323
+#: ../README.md:325
 msgid ""
 "To **disable** rbenv managing your Ruby versions, simply comment or remove "
 "the `rbenv init` line from your shell startup configuration. This will "
@@ -1347,7 +1359,7 @@ msgstr ""
 "rbenvは完全に迂回されます。"
 
 #. type: Plain text
-#: ../README.md:325
+#: ../README.md:327
 #, no-wrap
 msgid "   While disabled, `rbenv` will still be accessible on the command line, but your Ruby apps won't be affected by version switching.\n"
 msgstr ""
@@ -1355,7 +1367,7 @@ msgstr ""
 "   ただし、Rubyのアプリはバージョンの切替えに左右されなくなります。\n"
 
 #. type: Bullet: '2. '
-#: ../README.md:327
+#: ../README.md:329
 msgid ""
 "To completely **uninstall** rbenv, perform step (1) and then remove the "
 "rbenv root directory. This will **delete all Ruby versions** that were "
@@ -1367,13 +1379,13 @@ msgstr ""
 "のバージョンが削除**されます。"
 
 #. type: Plain text
-#: ../README.md:329
+#: ../README.md:331
 #, no-wrap
 msgid "       rm -rf \"$(rbenv root)\"\n"
 msgstr "       rm -rf \"$(rbenv root)\"\n"
 
 #. type: Plain text
-#: ../README.md:335
+#: ../README.md:337
 #, no-wrap
 msgid ""
 "   If you've installed rbenv using a package manager, as a final step\n"
@@ -1388,13 +1400,13 @@ msgstr ""
 "   - Archlinuxとその派生：`sudo pacman -R rbenv`\n"
 
 #. type: Title ##
-#: ../README.md:336
+#: ../README.md:338
 #, no-wrap
 msgid "Development"
 msgstr "開発"
 
 #. type: Plain text
-#: ../README.md:339
+#: ../README.md:341
 msgid ""
 "Tests are executed using [Bats](https://github.com/bats-core/bats-core):"
 msgstr ""
@@ -1402,7 +1414,7 @@ msgstr ""
 "す。"
 
 #. type: Plain text
-#: ../README.md:342
+#: ../README.md:344
 #, no-wrap
 msgid ""
 "    $ bats test\n"
@@ -1412,7 +1424,7 @@ msgstr ""
 "    $ bats test/<file>.bats\n"
 
 #. type: Plain text
-#: ../README.md:345
+#: ../README.md:347
 msgid ""
 "Please feel free to submit pull requests and file bugs on the [issue tracker]"
 "(https://github.com/rbenv/rbenv/issues)."
@@ -1421,28 +1433,35 @@ msgstr ""
 "issues)でのバグ報告はご自由にどうぞ。"
 
 #. type: Link reference
-#: ../README.md:347
+#: ../README.md:349
 #, no-wrap
 msgid "[ruby-build]: https://github.com/rbenv/ruby-build#readme"
 msgstr "[ruby-build]: https://github.com/gemmaro/ruby-build/tree/ja/translation/ja#readme"
 
 #. type: Link reference
-#: ../README.md:348
+#: ../README.md:350
 #, no-wrap
 msgid "[hooks]: https://github.com/rbenv/rbenv/wiki/Authoring-plugins#rbenv-hooks"
 msgstr "[hooks]: https://github.com/rbenv/rbenv/wiki/Authoring-plugins#rbenv-hooks"
 
 #. type: Link reference
-#: ../README.md:349
+#: ../README.md:351
 #, no-wrap
 msgid "[alternatives]: https://github.com/rbenv/rbenv/wiki/Comparison-of-version-managers"
 msgstr "[alternatives]: https://github.com/rbenv/rbenv/wiki/Comparison-of-version-managers"
 
 #. type: Link reference
-#: ../README.md:350
+#: ../README.md:352
 #, no-wrap
 msgid "[plugins]: https://github.com/rbenv/rbenv/wiki/Plugins"
 msgstr "[plugins]: https://github.com/rbenv/rbenv/wiki/Plugins"
+
+#, no-wrap
+#~ msgid ""
+#~ "   Archlinux has an [AUR Package](https://aur.archlinux.org/packages/rbenv/) for\n"
+#~ "   rbenv and you can install it from the AUR using the instructions from this\n"
+#~ "   [wiki page](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_and_upgrading_packages).\n"
+#~ msgstr "   Archlinuxにはrbenvの[AURパッケージ](https://aur.archlinux.org/packages/rbenv/)があり、こちらの[ウィキページ](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_and_upgrading_packages)にある手順を使ってAURからインストールできます。\n"
 
 #~ msgid ""
 #~ "You can run `rbenv init -` for yourself to inspect the generated script."

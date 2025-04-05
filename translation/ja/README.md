@@ -57,7 +57,11 @@ Homebrewパッケージ管理があるシステムでは、「パッケージ管
    
    #### Arch Linuxとその派生
    
-   Archlinuxにはrbenvの[AURパッケージ](https://aur.archlinux.org/packages/rbenv/)があり、こちらの[ウィキページ](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_and_upgrading_packages)にある手順を使ってAURからインストールできます。
+   Archlinuxには[公式パッケージ](https://archlinux.org/packages/extra/any/rbenv/)があり、そちらからインストールできます。
+
+   ```sh
+   sudo pacman -S rbenv
+   ```
 
    #### Fedora
 
