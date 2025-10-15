@@ -71,6 +71,14 @@ Homebrewパッケージ管理があるシステムでは、「パッケージ管
    sudo dnf install rbenv
    ```
 
+   #### OpenSUSE Tumbleweed
+
+   OpenSUSEには[公式パッケージ](https://software.opensuse.org/package/rbenv)があり、そちらからインストールできます。
+
+   ```sh
+   sudo zypper in rbenv
+   ```
+
 2. rbenvを読み込むよう、シェルを設定します。
 
     ```sh
